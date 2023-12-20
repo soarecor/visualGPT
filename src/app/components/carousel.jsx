@@ -25,7 +25,7 @@ export default function Carousel() {
 
   return (
     <Slider
-      className="border-solid border-2 border-sky-500 m-5"
+      className="m-5 "
       swipeable={false}
       draggable={false}
       responsive={responsive}
@@ -39,16 +39,16 @@ export default function Carousel() {
       dotListClass="custom-dot-list-style"
       itemClass="carousel-item-padding-40-px"
     >
-      <div className="border-solid border-2 border-red-600">
+      <div className="">
         <Item t={1} />
       </div>
-      <div className="border-solid border-2 border-red-600">
+      <div className="">
         <Item t={2} />
       </div>
-      <div className="border-solid border-2 border-red-600">
+      <div className="">
         <Item t={3} />
       </div>
-      <div className="border-solid border-2 border-red-600">
+      <div className="">
         <Item t={4} />
       </div>
     </Slider>

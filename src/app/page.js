@@ -36,7 +36,7 @@ export default async function CarouselPage() {
   return (
     <>
       <div className="App">
-        <span ref={el1} />
+        <span ref={el1} className="text-5xl m-5" />
       </div>
       <Carousel />
     </>
