@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import React from "react";
 import Typed from "typed.js";
 import Carousel from "./components/carousel";
@@ -19,15 +18,6 @@ async function getImages() {
 }
 
 export default async function CarouselPage() {
-  // <Image
-  //   src="/vercel.svg"
-  //   alt="Vercel Logo"
-  //   className="dark:invert"
-  //   width={100}
-  //   height={24}
-  //   priority
-  // />
-
   // Create reference to store the DOM element containing the animation
   const el1 = React.useRef(null);
 

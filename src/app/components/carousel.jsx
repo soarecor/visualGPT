@@ -48,6 +48,9 @@ export default function Carousel() {
       <div className="border-solid border-2 border-red-600">
         <Item t={3} />
       </div>
+      <div className="border-solid border-2 border-red-600">
+        <Item t={4} />
+      </div>
     </Slider>
   );
 }
