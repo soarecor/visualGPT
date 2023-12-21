@@ -6,21 +6,15 @@
 
 2. Clone to your local environment
 
-```git clone https://github.com/soarecor/visualGPT
-
-```
+`git clone https://github.com/soarecor/visualGPT`
 
 3. Install all dependencies
 
-```npm install
-
-```
+`npm install`
 
 4. Run the project
 
-```npm run dev
-
-```
+`npm run dev`
 
 ## Improvements that could be made
 
