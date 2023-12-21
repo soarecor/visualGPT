@@ -22,6 +22,7 @@ export default function Item({ id }) {
         strings: [descriptions[id]],
         typeSpeed: 50,
         showCursor: false,
+        startDelay: id === 1 ? 2500 : 1600,
         onComplete: function(self) {
           setId(id + 1);
         },

@@ -20,7 +20,7 @@ export default async function Title({ id }) {
 
   return (
     <div className="mx-auto lg:w-[80%] lg:w-screen-lg text-left">
-      <span ref={el1} className="text-xl md:text-3xl text-5xl m-5" />
+      <span ref={el1} className="text-xl md:text-3xl lg:text-5xl m-5" />
     </div>
   );
 }
