@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# VisualGPT
 
-## Getting Started
+## Steps to run this project locally
 
-First, run the development server:
+1. Ensure you have Node js version v18.17.0 or greater installed. You will need this version of Node to run the project.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+2. Clone to your local environment
+
+```git clone https://github.com/soarecor/visualGPT
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Install all dependencies
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```
 
-## Learn More
+4. Run the project
 
-To learn more about Next.js, take a look at the following resources:
+```npm run dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Improvements that could be made
 
-## Deploy on Vercel
+1. Images and text in the carousel begin streaming while the Title is still streaming. This can be fixed by adding the Title under the same context (via React's useContext hook) as text. This was attempted - however I kept running into issues with Next as shown in the image below.
+   ![Screenshot](next-error.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. A skeleton loader can be added to show text below the image also loading separately from the image.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. The carousel arrows can be customized to something more specific and spaced out so they do not overlap the images.
+
+4. The carousel can be styled to be more responsive for tablet and mobile.
+
+5. Automatically scroll the carousel as more images and text start streaming.
