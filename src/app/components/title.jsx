@@ -7,7 +7,7 @@ export default async function Title({ id }) {
 
   React.useEffect(() => {
     const typed = new Typed(el1.current, {
-      strings: ["<i>First</i> sentence."],
+      strings: ["How to ollie on a snowboard"],
       typeSpeed: 50,
       showCursor: false,
     });

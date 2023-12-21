@@ -9,12 +9,17 @@ export default function Item({ id }) {
   const [show, setShow] = React.useState(false);
   const { typeId, setId } = React.useContext(TypedContext);
 
+  const descriptions = {
+    1: "Get up a bit of speed but not too much, then crouch down by bending at the knees and shift your weight onto your back leg. This will build up the energy (like pulling back a spring) for the ollie.",
+    2: "Keeping your weight on the back foot, lift the nose off the ground and spring up off the tail.",
+    3: "Whilst you are airborne shift your weight so that your weight is centred over the board and the board is level. Raise your knees towards your chest as you do this. Raising your knees helps to keep you compact and balanced and should give you a bit more hang time.",
+    4: "Straighten your knees slightly before impact (but they should still be slightly bent) and land on both feet. Once you are comfortable landing on both feet you can try landing nose first then settling back in.",
+  };
+
   React.useEffect(() => {
     if (id === typeId) {
       let typed = new Typed(el.current, {
-        strings: [
-          `<i>${id}</i> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum`,
-        ],
+        strings: [descriptions[id]],
         typeSpeed: 50,
         showCursor: false,
         onComplete: function(self) {
@@ -33,7 +38,7 @@ export default function Item({ id }) {
     <div className="m-4">
       {show ? (
         <div className="animate-fade-in">
-          <img src="/image.jpeg" className={`rounded-lg`} />
+          <img src={`/${id}.png`} className={`rounded-lg`} />
           <div className="mt-4">
             <span ref={el} />
           </div>
