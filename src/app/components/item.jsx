@@ -4,10 +4,9 @@ import Image from "next/image";
 import { Skeleton } from "./ui/skeleton";
 import TypedContext from "./typed-context";
 
-export default function Item({ t, id }) {
+export default function Item({ id }) {
   const el = React.useRef(null);
   const [show, setShow] = React.useState(false);
-
   const { typeId, setId } = React.useContext(TypedContext);
 
   React.useEffect(() => {
@@ -15,7 +14,7 @@ export default function Item({ t, id }) {
     if (id === typeId) {
       let typed = new Typed(el.current, {
         strings: [
-          `<i>${t}</i> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum`,
+          `<i>${id}</i> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum`,
         ],
         typeSpeed: 50,
         showCursor: false,
@@ -29,7 +28,7 @@ export default function Item({ t, id }) {
     return () => {
       // typed.destroy();
     };
-  }, [t, el, id, typeId]);
+  }, [el, id, typeId]);
 
   return (
     <div className="m-4">

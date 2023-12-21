@@ -30,7 +30,7 @@ export default function Carousel() {
   return (
     <TypedContext.Provider value={value}>
       <Slider
-        className="lg:w-[80%] lg:w-screen-lg"
+        className="lg:w-[80%] lg:w-screen-lg mx-auto"
         swipeable={false}
         draggable={false}
         responsive={responsive}
@@ -45,16 +45,16 @@ export default function Carousel() {
         itemClass="carousel-item-padding-40-px"
       >
         <div className="">
-          <Item t={1} id={1} />
+          <Item id={1} />
         </div>
         <div className="">
-          <Item t={2} id={2} />
+          <Item id={2} />
         </div>
         <div className="">
-          <Item t={3} id={3} />
+          <Item id={3} />
         </div>
         <div className="">
-          <Item t={4} id={4} />
+          <Item id={4} />
         </div>
       </Slider>
     </TypedContext.Provider>
