@@ -23,7 +23,7 @@ export default function Carousel() {
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 1,
-      slidesToSlide: 1, // optional, default to 1.
+      slidesToSlide: 2, // optional, default to 1.
     },
   };
 

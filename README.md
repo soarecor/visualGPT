@@ -8,7 +8,9 @@
 
 `git clone https://github.com/soarecor/visualGPT`
 
-3. Install all dependencies
+3. Change directory to the project directory and install all dependencies
+
+`cd visualGPT`
 
 `npm install`
 

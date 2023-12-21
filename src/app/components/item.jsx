@@ -44,7 +44,7 @@ export default function Item({ id }) {
           </div>
         </div>
       ) : (
-        <div className="h-[600px] min-h-[220px] flex items-center justify-center">
+        <div className="h-200px xl:h-[400px] min-h-[220px] flex items-center justify-center">
           <Skeleton className="w-[100px] h-[10px] rounded-full text-white bg-white" />
         </div>
       )}
