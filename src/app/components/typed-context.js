@@ -2,7 +2,7 @@ import React from "react";
 
 // set the defaults
 const TypedContext = React.createContext({
-  typeId: 0,
+  typeId: 1,
   setId: () => {},
 });
 

@@ -6,7 +6,7 @@ import Item from "./item";
 import TypedContext from "./typed-context";
 
 export default function Carousel() {
-  const [typeId, setId] = React.useState(0);
+  const [typeId, setId] = React.useState(1);
   const value = { typeId, setId };
   console.log(typeId);
   const responsive = {

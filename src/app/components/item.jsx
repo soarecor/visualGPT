@@ -10,7 +10,6 @@ export default function Item({ id }) {
   const { typeId, setId } = React.useContext(TypedContext);
 
   React.useEffect(() => {
-    if (typeId === 0) setId(1);
     if (id === typeId) {
       let typed = new Typed(el.current, {
         strings: [
