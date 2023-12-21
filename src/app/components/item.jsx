@@ -34,16 +34,13 @@ export default function Item({ id }) {
     <div className="m-4">
       {show ? (
         <div className="animate-fade-in">
-          <img
-            src="/image.jpeg"
-            className={`transition-opacity ease-in-out delay-150`}
-          />
+          <img src="/image.jpeg" className={`rounded-lg`} />
           <div className="mt-4">
             <span ref={el} />
           </div>
         </div>
       ) : (
-        <div className="h-[800px] min-h-[220px] flex items-center justify-center">
+        <div className="h-[600px] min-h-[220px] flex items-center justify-center">
           <Skeleton className="w-[100px] h-[10px] rounded-full text-white bg-white" />
         </div>
       )}

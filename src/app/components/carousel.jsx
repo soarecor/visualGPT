@@ -30,7 +30,7 @@ export default function Carousel() {
   return (
     <TypedContext.Provider value={value}>
       <Slider
-        className="lg:w-[80%] lg:w-screen-lg mx-auto"
+        className="lg:w-[80%] lg:w-screen-lg mx-auto mt-4"
         swipeable={false}
         draggable={false}
         responsive={responsive}
@@ -42,18 +42,18 @@ export default function Carousel() {
         containerClass="carousel-container"
         removeArrowOnDeviceType={["mobile"]}
         dotListClass="custom-dot-list-style"
-        itemClass="carousel-item-padding-40-px"
+        itemClass="carousel-item-padding-100-px"
       >
-        <div className="">
+        <div className="mx-2 border rounded-lg border-slate-800">
           <Item id={1} />
         </div>
-        <div className="">
+        <div className="mx-2 border rounded-lg border-slate-800">
           <Item id={2} />
         </div>
-        <div className="">
+        <div className="mx-2 border rounded-lg border-slate-800">
           <Item id={3} />
         </div>
-        <div className="">
+        <div className="mx-2 border rounded-lg border-slate-800">
           <Item id={4} />
         </div>
       </Slider>
