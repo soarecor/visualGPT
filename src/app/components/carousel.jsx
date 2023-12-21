@@ -3,8 +3,12 @@ import Typed from "typed.js";
 import Slider from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Item from "./item";
+import TypedContext from "./typed-context";
 
 export default function Carousel() {
+  const [typeId, setId] = React.useState(0);
+  const value = { typeId, setId };
+  console.log(typeId);
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -24,33 +28,35 @@ export default function Carousel() {
   };
 
   return (
-    <Slider
-      className="m-5 "
-      swipeable={false}
-      draggable={false}
-      responsive={responsive}
-      infinite={true}
-      autoPlaySpeed={1000}
-      keyBoardControl={true}
-      customTransition="all 1"
-      transitionDuration={500}
-      containerClass="carousel-container"
-      removeArrowOnDeviceType={["tablet", "mobile"]}
-      dotListClass="custom-dot-list-style"
-      itemClass="carousel-item-padding-40-px"
-    >
-      <div className="">
-        <Item t={1} />
-      </div>
-      <div className="">
-        <Item t={2} />
-      </div>
-      <div className="">
-        <Item t={3} />
-      </div>
-      <div className="">
-        <Item t={4} />
-      </div>
-    </Slider>
+    <TypedContext.Provider value={value}>
+      <Slider
+        className="lg:w-[80%] lg:w-screen-lg"
+        swipeable={false}
+        draggable={false}
+        responsive={responsive}
+        infinite={false}
+        autoPlaySpeed={1000}
+        keyBoardControl={true}
+        customTransition="all 1"
+        transitionDuration={500}
+        containerClass="carousel-container"
+        removeArrowOnDeviceType={["mobile"]}
+        dotListClass="custom-dot-list-style"
+        itemClass="carousel-item-padding-40-px"
+      >
+        <div className="">
+          <Item t={1} id={1} />
+        </div>
+        <div className="">
+          <Item t={2} id={2} />
+        </div>
+        <div className="">
+          <Item t={3} id={3} />
+        </div>
+        <div className="">
+          <Item t={4} id={4} />
+        </div>
+      </Slider>
+    </TypedContext.Provider>
   );
 }
